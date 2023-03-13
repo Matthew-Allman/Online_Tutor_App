@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background: #17bf9d13;
+  overflow-x: hidden;
+}
+
+/* =========== base style ========= */
+
+.section {
+  padding: 0px 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 2rem;
+  line-height: 50px;
+  font-family: "Poppins", sans-serif;
+  color: #0a2b1e;
+  font-weight: 600;
+}
+
+p {
+  color: #596b65;
+  font-size: 1rem;
+  line-height: 35px;
+  font-family: "Andada Pro", serif;
+  font-weight: 400;
+}
+
+i {
+  color: #17bf9e;
+}
+
+.show-nav {
+  color: red;
+}
+
+@media screen and (max-width: 999px) {
+  .section {
+    padding: 0px 15px;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(23, 191, 158, 0.27) 0%,
+    rgba(236, 255, 253, 0.46) 100%
+  );
+}
+
+.about-gradient {
+  background: linear-gradient(
+    0deg,
+    rgba(23, 191, 158, 0.27) 0%,
+    rgba(236, 255, 253, 0.46) 100%
+  );
+}
+
+.overlay-top {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(23, 191, 157, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+#container:hover .overlay-top {
+  bottom: 0;
+  height: 100%;
+}
+
+#container-top {
+  position: relative;
+}
+
+#text {
+  white-space: nowrap;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.spacer-background {
+  background: linear-gradient(
+    180deg,
+    rgba(23, 191, 157, 0.26) 0%,
+    rgba(23, 191, 157, 0) 100%
+  );
+}
+
+span.play_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+span.play_icon i {
+  color: #17bf9e;
+  font-size: 2rem;
+  padding: 10px;
+}
